@@ -688,11 +688,13 @@ body.dark-mode .pastel-bg-layer-2 {
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.45rem;
+  font-weight: 600;
   color: var(--text-body);
   margin-bottom: 2.5rem;
   max-width: 460px;
-  line-height: 1.75;
+  line-height: 1.6;
 }
 .hero-ctas {
   display: flex;
