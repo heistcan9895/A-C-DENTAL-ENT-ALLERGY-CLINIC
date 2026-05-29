@@ -162,7 +162,7 @@ body.dark-mode {
    RESET & BASE
    ════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body {
   font-family: var(--font-body);
   background: transparent;
@@ -185,12 +185,12 @@ h1,h2,h3 { line-height: 1.15; color: var(--text-primary); }
 .pastel-gradient-bg {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
   pointer-events: none;
-  background: linear-gradient(135deg, #ffe8f3, #d9f3ff);
+  background: linear-gradient(135deg, hsl(var(--hue-gold), 65%, 92%), hsl(var(--hue-navy), 30%, 94%));
   transition: background 0.4s ease;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -1727,17 +1727,17 @@ section:not(#hero) {
 
   /* Mobile Background Performance Optimization */
   .pastel-bg-layer-1, .pastel-bg-layer-2 {
-    filter: blur(35px) !important;
-    -webkit-filter: blur(35px) !important;
+    filter: blur(90px) !important;
+    -webkit-filter: blur(90px) !important;
     animation: none !important;
   }
   .pastel-bg-layer-1 {
-    width: 130vw !important;
-    height: 130vw !important;
+    width: 130% !important;
+    height: 130% !important;
   }
   .pastel-bg-layer-2 {
-    width: 110vw !important;
-    height: 110vw !important;
+    width: 110% !important;
+    height: 110% !important;
   }
 }
 
@@ -2084,7 +2084,7 @@ body.dark-mode .shiny-text {
 @media (max-width: 768px) {
   .pastel-bg-layer-1, .pastel-bg-layer-2 {
     animation: none !important;
-    filter: blur(40px) !important;
-    -webkit-filter: blur(40px) !important;
+    filter: blur(90px) !important;
+    -webkit-filter: blur(90px) !important;
   }
 }
